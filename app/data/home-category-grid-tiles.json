@@ -1,0 +1,53 @@
+{
+  "tiles": [
+    {
+      "id": "001",
+      "class": false,
+      "href": "/nav-category.html",
+      "label":   "Computer Accessories",
+      "image-filename":  "computeraccessories_sm.png",
+      "background-color":  "purple-bg"
+    },
+    {
+      "id": "002",
+      "class": false,
+      "href": "#",
+      "label":   "Mobile",
+      "image-filename":  "mobile_sm.png",
+      "background-color":  "pink-bg"
+    },
+    {
+      "id": "003",
+      "class": false,
+      "href": "#",
+      "label":   "Smart Home",
+      "image-filename":  "smarthome_sm.png",
+      "background-color":  "teal-bg"
+    },
+    {
+      "id": "004",
+      "class": false,
+      "href": "#",
+      "label":   "Gaming",
+      "image-filename":  "gaming_sm.png",
+      "background-color":  "medium-blue-bg"
+    },
+    {
+      "id": "005",
+      "class": false,
+      "href": "#",
+      "label":   "Music",
+      "image-filename":  "music_sm.png",
+      "background-color":  "yellow-green-bg",
+      "reverse-colors": "reverse-colors"
+    },
+    {
+      "id": "006",
+      "class": "bottom-image",
+      "href": "#",
+      "label":   "Business",
+      "image-filename":  "business_sm.png",
+      "background-color":  "blue-bg"
+    }
+  ]
+}

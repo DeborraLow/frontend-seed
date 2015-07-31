@@ -1,0 +1,17 @@
+
+{{#product-hero}}
+  <h1 class="text-uppercase product-title">{{productKeyboard.title}}</h1>
+  <div class="price">
+    <sup>{{productKeyboard.units}}</sup>{{productKeyboard.wholeAmount}}<sup>{{productKeyboard.changeAmount}}</sup>
+  </div>
+  <p>{{productKeyboard.description}}</p>
+
+  <ul class="product-view visible-md visible-lg">
+    <li>
+      <a id="product-360-view"><icon class="icon-360"></icon>{{productKeyboard.view360}}</a></li>
+    <li>
+      <a id="product-view-specs"><icon class="icon-plus"></icon>{{productKeyboard.viewSpecs}}</a>
+    </li>
+  </ul>
+  <em class="visible-md visible-lg">{{productKeyboard.shippingInfo}}</em>
+{{/product-hero}}

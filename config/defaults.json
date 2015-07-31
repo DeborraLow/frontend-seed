@@ -1,0 +1,39 @@
+{
+  "project": {
+    "tasks": {
+      "browserSync": {
+        "open": "local",
+        "server": {
+          "baseDir": ["./build", "./app"]
+        }
+      },
+      "browserify": {
+        "modules": [
+          {
+            "outputName": "main.js",
+            "entries": ["./app/main.js"],
+            "dest": "./build",
+            "require": []
+          },
+          {
+            "outputName": "head.js",
+            "entries": ["./app/head.js"],
+            "dest": "./build",
+            "require": []
+          }
+        ]
+      },
+      "assemble": {
+        "src": "app/*.hbs",
+        "layouts": "app/lib/hbs/layouts/**/*.hbs",
+        "partials": "app/components/**/*.hbs",
+        "layout": "default",
+        "data": "app/data/**/*.json"
+      },
+      "sass": {
+        "src": "app/*.scss",
+        "dest": "./build"
+      }
+    }
+  }
+}

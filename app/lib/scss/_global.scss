@@ -1,0 +1,136 @@
+body {
+  min-width: 320px;
+}
+
+img {
+  max-size: 100%;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.no-scroll { 
+  @media (max-width: $screen-sm-min){
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hidden { display: none;}
+.pink-bg { background-color: $pink; }
+.yellow-green-bg { background-color: $yellow-green; }
+.purple-bg { background-color: $purple; }
+.blue-bg { background-color: $blue; }
+.medium-blue-bg { background-color: $medium-blue; }
+.red-bg { background-color: $red; }
+.light-blue-bg { background-color: $light-blue; }
+.teal-bg{background: $teal;}
+.gray-bg{background: $gray;}
+.gaming-gray-bg{background: $gaming-gray ;}
+
+.force-white-text * { color: $white !important;}
+.force-dark-text * { color: $dark-gray !important;}
+
+//this allows gutterless columns and rows where required
+//using this for the category navigation fluid container
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child),
+.container.no-gutter {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+body.global-elements {
+  .content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    min-height: 500px;
+  }
+}
+
+//// global checkbox styles
+input[type="checkbox"] {
+  vertical-align:middle;
+  margin: 0 0 0;
+}
+
+input[type="checkbox"]+label {
+  cursor:pointer;
+}
+
+input[type="checkbox"]+label:before {
+  content:"";
+  display:inline-block;
+  height:20px;
+  margin: -3px 10px 0 -22px;
+  vertical-align:middle;
+  width:20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label:before {
+  background: $sprite-sheet-checkbox left top no-repeat;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: $sprite-sheet-checkbox -20px top no-repeat;
+}
+
+#products-grid {
+  margin-bottom: 80px;
+  position: relative;
+  @media (min-width: $screen-md-min) {
+    min-height: 465px;
+  }
+
+  #compare-choices-btn {
+    @include btn-util;
+    @include label-small-uppercase;
+    display: none;
+    position: fixed;
+    z-index: 1;
+  }
+}
+
+// Offset of the top element from the navigation
+.navigation-offset {
+  padding-top: 60px;
+  @media (min-width: $screen-sm-min) {
+    padding-top: 145px;
+  }
+}
+
+//IE8 Browser Upgrade notification
+.browserupgrade{
+  position: fixed;
+  text-align:center;
+  width:100%;
+  border-bottom:2px solid $dark-gray;
+  top:0;
+  background: $white;
+  z-index: 3000;
+
+}
+
+
+.strikethrough {
+  color: $medium-dark-gray;
+  margin-right: 0.2em;
+  position: relative;
+
+  >:last-child:after{
+    content: " ";
+    width:40px;
+    height:1em;
+    position: absolute;
+    left:-1%;
+    top:48%;
+    border-top: 1px solid $gray;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "features": [
+    {
+      "id": "01",
+      "title": "Portable",
+      "description": "You're going places. Take a keyboard. Keys-To-Go packs light, types comfortably and never leaves you at a loss for words.",
+      "image": {
+        "path": "/assets/images/features/portable.jpg",
+        "description": ""
+      }
+    }, {
+      "id": "02",
+      "title": "Durable",
+      "description": "Lorem Ipsum Durable",
+      "image": {
+        "path": "/assets/images/features/durable.jpg",
+        "description": ""
+      }
+    }, {
+      "id": "03",
+      "title": "High Quality",
+      "description": "Lorem Ipsum High Quality",
+      "image": {
+        "path": "/assets/images/features/high-quality.jpg",
+        "description": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+---
+id: homepage-sliding-panel
+---
+<!-- begin homepage-sliding-panel component-->
+{{#if image-bg}}
+<section id="{{id}}" class="section cover-background {{panel-type}} {{background-color}}" style="background-image: url('/assets/images/hero/{{image-bg}}')">
+{{else}}
+<section id="{{id}}" class="section {{panel-type}} {{background-color}}">
+{{/if}}
+  <div class="container">
+    <div class="row panel-copy">
+      <div class="{{panel-copy-classes}} panel-text">
+        <div class="panel-text-transform">
+          <h3 class="eye-brow">{{prefix-headline}}</h3>
+          {{#if first-panel}}
+          <h1 class="{{headline-class}}">{{headline}}</h1>
+          {{else}}
+          <h2 class="{{headline-class}}">{{headline}}</h2>
+          {{/if}}
+          <button class="learn-more {{button-class}}">Learn More</button>
+        </div>
+      </div>
+      {{#if image-filename}}
+      <div class="col-xs-12 col-md-11 col-md-offset-1 {{image-classes}}">
+        <img src="/assets/images/hero/{{image-filename}}" />
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>
+<!-- end homepage-sliding-panel component -->

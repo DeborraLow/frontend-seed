@@ -1,0 +1,24 @@
+---
+component: product-features-legacy
+---
+<div class="{{component}} product-features container">
+  {{#product-features-legacy}}
+  <h2 class="headline">Features</h2>
+  <ul class="features-list">
+    {{#each features }}
+    <li class="features-list-item">
+      <h3 class="feature-title"><i class="svg-uarr svg-uarr-dims"></i> {{title}}</h3>
+    	<div class="feature-content">
+    		<p class="feature-description">{{description}}</p>
+        {{#if moreContent}}
+          <a class="more-content" href="{{moreContent.link}}">{{moreContent.cta}}</a>
+        {{/if}}
+    	</div>
+    </li>
+    {{/each}}
+  </ul>
+  <div class="splash-image">
+    <img src="{{image.path}}" alt="{{image.description}}">
+  </div>
+  {{/product-features-legacy}}
+</div>

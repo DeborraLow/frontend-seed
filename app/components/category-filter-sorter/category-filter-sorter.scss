@@ -1,0 +1,211 @@
+#category-filter {
+	text-transform: uppercase;
+	color: $text-gray;
+	background-color: $white;
+	margin: 0 0 0;
+	@media (min-width: $screen-md-min) {
+		margin-bottom: 40px;
+	}
+	padding: 0;
+
+	#category-tab {
+		@include points("font-size", 14);
+		text-align: center;
+		background-color: $white;
+		width: 100%;
+		height: 77px;
+		display: block;
+		margin: 0;
+		padding: 30px;
+		&:hover {
+			cursor: pointer;
+		}
+		.tab-label {
+			padding: 0 10px;
+		}
+	}
+
+	nav#category-list{
+		opacity: 1; //for tweening
+		height: 0; //for tweening
+		overflow: hidden;
+		position: absolute;
+		z-index: 1000;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: #efefef;
+		border-bottom: 0;
+		ul {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			list-style: none;
+			li {
+				&.active {
+					background-color: $light-gray !important;
+				}
+				@include points("font-size", 14);
+				background-color: $white;
+				text-transform: uppercase;
+				white-space: nowrap;
+				color: #2f3132;
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 20px;
+				&:hover {
+					background-color: $yellow;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+#filter-by-filter {
+
+	#filter-by-tab {
+		text-transform: uppercase;
+		@include points("font-size", 14);
+		text-align: center;
+		background-color: $light-gray;
+		width: 100%;
+		height: 77px;
+		display: block;
+		margin: 0;
+		padding: 30px;
+		&:hover {
+			cursor: pointer;
+		}
+		.tab-label {
+			padding: 0 10px;
+		}
+		&.active {
+			background-color: $white;
+		}
+	}
+
+	.filter-list-title {
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 0 35px;
+	}
+
+	#clear-all {
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 0 30px;
+		color: $blue;
+		.glyphicon {
+			//glyphicon overrides for specific use within clear all
+			color: $blue !important;
+			padding-left: 0px !important;
+			padding-right: 8px;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	ul#filter-by-list {
+		overflow: hidden;
+		height: 0;
+		position: absolute;
+		z-index: 1000;
+		width: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border-bottom: 0;
+		li {
+			@include points("font-size", 14);
+			background-color: $white;
+			text-transform: capitalize;
+			white-space: nowrap;
+			color: #2f3132;
+			display: block;
+			width: 100%;
+			text-align: left;
+			padding: 7px 0 7px 0;
+			.glyphicon {
+				padding-left: 10px;
+				top: 3px;
+				color: $gray;
+			}
+		}
+	}
+}
+
+#sort-by-filter {
+	text-transform: uppercase;
+	color: $text-gray;
+	background-color: $white;
+	margin: 0;
+	padding: 0;
+
+	#sort-by-tab {
+		@include points("font-size", 14);
+		text-align: center;
+		background-color: $light-gray;
+		width: 100%;
+		height: 77px;
+		display: block;
+		margin: 0;
+		padding: 30px;
+		&:hover {
+			cursor: pointer;
+		}
+		.tab-label {
+			padding: 0 10px;
+		}
+		&.active {
+			background-color: $white;
+		}
+	}
+
+	ul#sort-by-list {
+		//opacity: 0;
+		height: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: 1000;
+		width: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border-bottom: 0;
+		li {
+			@include points("font-size", 14);
+			background-color: $white;
+			text-transform: uppercase;
+			white-space: nowrap;
+			color: #2f3132;
+			display: block;
+			width: 100%;
+			text-align: center;
+			padding: 20px;
+			&:hover {
+				background-color: $yellow;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+#num-showing {
+	color: #999999;
+	font-family: "Helvetica", sans-serif;
+	@include points("font-size", 14);
+	text-align: right;
+	padding: 20px;
+}
+
+#no-results-found {
+	display: none;
+	text-align: center;
+	position: relative;
+	padding-top: 200px;
+	width: 100%;
+	min-height: 500px;
+}

@@ -1,0 +1,36 @@
+.tech-quote {
+  background-color: $black;
+  padding: 50px 0;
+  blockquote {
+    margin: auto;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto;
+  }
+  .quote {
+    margin: 0 auto;
+    padding: 27px 44px 19px;
+    font-size: 1.625em;
+    line-height: 1.307692308em;
+    font-family: "Brown-Pro-Lightitalic";
+    color: white;
+    text-align: center;
+  }
+  .cite {
+      font-size: 1.25em;
+      font-family: "Brown-Pro-Thin";
+      font-style:normal;
+      color: $grey;
+  }
+  @media (min-width: $screen-sm-min) {
+    padding-bottom: 65px;
+    .quote {
+      font-size: 2.25em;
+      line-height: 1.277777778em;
+    }
+  }
+}

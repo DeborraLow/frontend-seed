@@ -1,0 +1,95 @@
+---
+title: Compare Page
+id: compare
+layout: default
+headerType: short
+bgColor: purple-bg
+compare: hello
+hero1: Compare
+hero2: Mice
+compareClass: static-width
+heroAction: See All Mice
+---
+
+<div class="static-width container">
+  <!-- Start Compare Product Tile Row -->
+  <div id="compare-product-tiles" class="col-lg-12">
+		<div class="static-width container">
+	    <div class="col-lg-2 col-lg-pull-1 compare-product-tile">
+	    	<div class="col-lg-12 compare-product-image teal-bg">
+	    		<div class="compare-product-remove svg-close svg-close-dims" data-product-column="0" ></div>
+	    		<a href="/pdp.html">
+	    			<img src="/assets/images/compare-products/3.png" class="compare-product-image"/>
+	    		</a>
+	    	</div>
+	    	<div class="compare-product-name">Wireless Mouse M320</div>
+	    	<div class="compare-product-price"><sup>$</sup>29<sup>99</sup></div>
+	    	<a class="compare-learn-more">Learn More</a>
+	    </div>
+	    <div class="col-lg-2 col-lg-pull-1 compare-product-tile">
+	      <div class="col-lg-12 compare-product-image yellow-green-bg">
+	        <div class="compare-product-remove svg-close svg-close-dims" data-product-column="1" ></div>
+	        <a href="/pdp.html">
+		        <img src="/assets/images/compare-products/2.png" class="compare-product-image" />
+	        </a>
+	      </div>
+	      <div class="compare-product-name">Wireless Mini Mouse M187</div>
+	      <div class="compare-product-price"><sup>$</sup>24<sup>99</sup></div>
+	      <a class="compare-learn-more">Learn More</a>
+	    </div>
+	    <div class="col-lg-2 col-lg-pull-1 compare-product-tile">
+	      <div class="col-lg-12 compare-product-image pink-bg">
+	        <div class="compare-product-remove svg-close svg-close-dims" data-product-column="2" ></div>
+	        <a href="/pdp.html">
+		        <img src="/assets/images/compare-products/1.png" class="compare-product-image"/>
+	        </a>
+	      </div>
+	      <div class="compare-product-name">MX Master</div>
+	      <div class="compare-product-price"><sup>$</sup>99<sup>99</sup></div>
+	      <a class="compare-learn-more">Learn More</a>
+	    </div>
+	    <div class="col-lg-2 col-lg-pull-1 compare-product-tile">
+	      <div class="col-lg-12 compare-product-image purple-bg">
+	        <div class="compare-product-remove svg-close svg-close-dims" data-product-column="3" ></div>
+			<a href="/pdp.html">
+		        <img src="/assets/images/compare-products/0-sm.png" class="compare-product-image"/>
+	        </a>
+	      </div>
+	      <div class="compare-product-name">Wireless Trackball M570</div>
+	      <div class="compare-product-price strikethrough"><span class="price"><sup>$</sup>49<sup>99</sup></span></div>
+	      <div class="compare-product-price"><sup>$</sup>39<sup>99</sup></div>
+	      <a class="compare-learn-more">Learn More</a>
+	    </div>
+		</div>
+  </div>
+  <!-- End Compare Product Tile Row -->
+
+  <!-- Start Compare Feature Grid -->
+  <div class="row compare-feature-grid">
+    <div class="col-lg-10 col-lg-offset-1 compare-grid-header">
+      <div class="grid-header-title" data-toggle="collapse" data-target="#toggleFeatures">
+        All Features
+        <span class="triangle-down glyphicon glyphicon-triangle-bottom" data-toggle="collapse" aria-hidden="true"></span>
+        <span class="triangle-up glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div id="toggleFeatures" class="col-lg-10 col-lg-offset-1 compare-grid-features collapse in" aria-expanded="true">
+      {{#each feature-list.features}}
+        {{partial "feature-row" this}}
+      {{/each}}
+    </div>
+    <div class="col-lg-10 col-lg-offset-1 compare-grid-header">
+      <div class="grid-header-title" data-toggle="collapse" data-target="#toggleSpecs" style="width: 220px;">
+        Technical Specifications
+         <span class="triangle-down glyphicon glyphicon-triangle-bottom" data-toggle="collapse" aria-hidden="true"></span>
+        <span class="triangle-up glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div id="toggleSpecs" class="col-lg-10 col-lg-offset-1 compare-grid-features collapse in" aria-expanded="true">
+      {{#each tech-specs.specs}}
+        {{partial "specification-row" this}}
+      {{/each}}
+    </div>
+  </div>
+  <!-- End Compare Feature Grid -->
+</div>

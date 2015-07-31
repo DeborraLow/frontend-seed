@@ -1,0 +1,190 @@
+#category-filter-sorter-mobile {
+	#category-tab-mobile {
+		@include points("font-size", 14);
+		background-color: $white;
+		height: 65px;
+		display: block;
+		margin: 0;
+		padding: 25px 0;
+		&:hover {
+			cursor: pointer;
+		}
+		.tab-label {
+			text-transform: uppercase;
+			padding: 0 10px;
+		}
+		.triangle-down,.triangle-up {
+			float: right;
+  		padding-right: 25px;
+		}
+	}
+
+	#next-filter, #prev-filter {
+		div{
+			@include vertically-centered();
+		}
+		display: block;
+		height: 65px;
+		background-color:$light-gray;
+		text-align: center;
+	}
+
+	nav#category-list-mobile{
+		position: absolute;
+		z-index: 1000;
+		top: 65px;
+		margin: 0;
+		padding: 0;
+		background-color: white;
+		border-bottom: 20px solid $light-gray;
+		ul {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			list-style: none;
+			li {
+				&.active {
+					background-color: $light-gray !important;
+				}
+				@include points("font-size", 14);
+				background-color: $white;
+				text-transform: uppercase;
+				white-space: nowrap;
+				color: #2f3132;
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 20px;
+				&:hover {
+					background-color: $yellow;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	#filter-by-filter-mobile {
+
+		#filter-by-tab-mobile {
+			text-transform: uppercase;
+			@include points("font-size", 14);
+			text-align: center;
+			background-color: $light-gray;
+			height: 65px;
+			display: block;
+			margin: 0;
+			padding: 25px 0;
+			&:hover {
+				cursor: pointer;
+			}
+			.tab-label {
+				padding: 0 10px;
+			}
+			&.active {
+				background-color: $white;
+			}
+		}
+
+		.filter-list-title {
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 0 35px;
+		}
+
+		#clear-all-mobile {
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 0 30px;
+			color: $blue;
+			.glyphicon {
+				color: $blue !important;
+				padding-left: 0px !important;
+				padding-right: 8px;
+			}
+		}
+
+		.glyphicon {
+			padding: 0 10px;
+		}
+
+		ul#filter-by-list-mobile {
+			position: absolute;
+			z-index: 1000;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			border-bottom: 20px solid $light-gray;
+			li {
+				@include points("font-size", 14);
+				background-color: $white;
+				white-space: nowrap;
+				color: #2f3132;
+				display: block;
+				width: 100%;
+				text-align: left;
+				padding: 10px 0 10px 0;
+				.glyphicon {
+					padding-left: 10px;
+					top: 3px;
+					color: $gray;
+				}
+			}
+
+			.filter-list-title {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+	#sort-by-filter-mobile {
+		text-transform: uppercase;
+		color: $text-gray;
+		background-color: $white;
+		margin: 0;
+		padding: 0;
+
+		#sort-by-tab-mobile {
+			@include points("font-size", 14);
+			text-align: center;
+			background-color: $light-gray;
+			height: 65px;
+			display: block;
+			margin: 0;
+			padding: 25px 0;
+			&:hover {
+				cursor: pointer;
+			}
+			.tab-label {
+				padding: 0 10px;
+			}
+			&.active {
+				background-color: $white;
+			}
+		}
+
+		ul#sort-by-list-mobile {
+			position: absolute;
+			z-index: 1000;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			right: 0;
+			border-bottom: 20px solid $light-gray;
+			li {
+				@include points("font-size", 14);
+				background-color: $white;
+				text-transform: uppercase;
+				white-space: nowrap;
+				color: #2f3132;
+				display: block;
+				text-align: center;
+				padding: 20px;
+				&:hover {
+					background-color: $yellow;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

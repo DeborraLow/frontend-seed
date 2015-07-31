@@ -1,0 +1,402 @@
+// Global dropdowns
+
+//colors
+$color_celeste_approx: #cccccc;
+$color_pink_swan_approx: #bbbbbb;
+$color_dodger_blue_approx: #3297fd;
+
+//@extend-elements
+//original selectors
+//.dk-select, .dk-select-multi
+%extend_dk-select   {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.5em;
+	width: 200px;
+	cursor: pointer;
+}
+
+//original selectors
+//.dk-selected:before, .dk-selected:after
+%extend_dk-selected:before {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+}
+
+
+.dk-select {
+	//Instead of the line below you could use @includebox-sizing($bs)
+	box-sizing: border-box;
+	@extend %extend_dk-select;
+	* {
+		//Instead of the line below you could use @includebox-sizing($bs)
+		box-sizing: border-box;
+		&:before {
+			//Instead of the line below you could use @includebox-sizing($bs)
+			box-sizing: border-box;
+		}
+		&:after {
+			//Instead of the line below you could use @includebox-sizing($bs)
+			box-sizing: border-box;
+		}
+	}
+	.dk-select-options {
+		position: absolute;
+		display: none;
+		left: 0;
+		right: 0;
+	}
+}
+.dk-select-multi {
+	//Instead of the line below you could use @includebox-sizing($bs)
+	box-sizing: border-box;
+	@extend %extend_dk-select;
+	* {
+		//Instead of the line below you could use @includebox-sizing($bs)
+		box-sizing: border-box;
+		&:before {
+			//Instead of the line below you could use @includebox-sizing($bs)
+			box-sizing: border-box;
+		}
+		&:after {
+			//Instead of the line below you could use @includebox-sizing($bs)
+			box-sizing: border-box;
+		}
+	}
+	.dk-select-options {
+		max-height: 10em;
+	}
+	&:focus {
+		outline: none;
+		.dk-select-options {
+			display: block;
+			border-color: $color_dodger_blue_approx;
+		}
+	}
+	&:hover {
+		outline: none;
+	}
+}
+.dk-selected {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+	background-color: $black;
+	border: 1px solid $color_celeste_approx;
+	//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+	border-radius: 0.4em;
+	padding: 0 1.5em 0 0.5em;
+	text-overflow: ellipsis;
+	&:before {
+		@extend %extend_dk-selected:before;
+		top: 50%;
+		border: solid transparent;
+		border-width: 0.25em 0.25em 0;
+		border-top-color: $color_celeste_approx;
+		margin: -0.125em 0.5em 0 0;
+		width: 6px;
+	}
+	&:after {
+		@extend %extend_dk-selected:before;
+		top: 0;
+		height: 100%;
+		border-left: 1px solid $color_celeste_approx;
+		margin: 0 1.5em 0 0;
+	}
+	&:hover {
+		outline: none;
+		border-color: $color_dodger_blue_approx;
+		&:before {
+			border-top-color: $color_dodger_blue_approx;
+		}
+		&:after {
+			border-left-color: $color_dodger_blue_approx;
+		}
+	}
+	&:focus {
+		outline: none;
+		border-color: $color_dodger_blue_approx;
+		&:before {
+			border-top-color: $color_dodger_blue_approx;
+		}
+		&:after {
+			border-left-color: $color_dodger_blue_approx;
+		}
+	}
+}
+.dk-selected-disabled {
+	color: $color_pink_swan_approx;
+}
+.dk-select-open-up {
+	.dk-select-options {
+		//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+		border-radius: 0.4em 0.4em 0 0;
+		margin-bottom: -1px;
+		bottom: 100%;
+		display: block;
+		border-color: $color_dodger_blue_approx;
+	}
+	.dk-selected {
+		//Instead of the line below you could use @includeborder-top-left-radius($radius)
+		border-top-left-radius: 0;
+		//Instead of the line below you could use @includeborder-top-right-radius($radius)
+		border-top-right-radius: 0;
+		border-color: $color_dodger_blue_approx;
+		&:before {
+			border-width: 0 0.25em 0.25em;
+			border-bottom-color: $color_dodger_blue_approx;
+		}
+		&:after {
+			border-left-color: $color_dodger_blue_approx;
+		}
+	}
+}
+.dk-select-open-down {
+	.dk-select-options {
+		//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+		border-radius: 0 0 0.4em 0.4em;
+		margin-top: -1px;
+		top: 100%;
+		display: block;
+		border-color: $color_dodger_blue_approx;
+	}
+	.dk-selected {
+		//Instead of the line below you could use @includeborder-bottom-left-radius($radius)
+		border-bottom-left-radius: 0;
+		//Instead of the line below you could use @includeborder-bottom-right-radius($radius)
+		border-bottom-right-radius: 0;
+		border-color: $color_dodger_blue_approx;
+		&:before {
+			border-width: 0 0.25em 0.25em;
+			border-bottom-color: $color_dodger_blue_approx;
+		}
+		&:after {
+			border-left-color: $color_dodger_blue_approx;
+		}
+	}
+}
+.dk-select-options {
+	background-color: $white;
+	border: 1px solid $color_celeste_approx;
+	//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+	border-radius: 0.4em;
+	list-style: none;
+	margin: 0;
+	max-height: 10.5em;
+	min-width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0.25em 0;
+	width: auto;
+	z-index: 100;
+	.dk-option-highlight {
+		background-color: $color_dodger_blue_approx;
+		color: $white;
+	}
+	.dk-option-disabled {
+		color: $color_pink_swan_approx;
+		background-color: transparent;
+	}
+}
+.dk-option-selected {
+	background-color: $color_dodger_blue_approx;
+	color: $white;
+}
+.dk-option {
+	padding: 0 0.5em;
+}
+.dk-optgroup {
+	border: solid $color_celeste_approx;
+	border-width: 1px 0;
+	padding: 0.25em 0;
+	margin-top: 0.25em;
+	+ {
+		.dk-option {
+			margin-top: 0.25em;
+		}
+		.dk-optgroup {
+			border-top-width: 0;
+			margin-top: 0;
+		}
+	}
+	&:nth-child(2) {
+		padding-top: 0;
+		border-top: none;
+		margin-top: 0;
+	}
+	&:last-child {
+		border-bottom-width: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+.dk-optgroup-label {
+	padding: 0 0.5em 0.25em;
+	font-weight: bold;
+	width: 100%;
+}
+.dk-optgroup-options {
+	list-style: none;
+	padding-left: 0;
+	li {
+		padding-left: 1.2em;
+	}
+}
+.dk-select-disabled {
+	opacity: 0.6;
+	color: $color_pink_swan_approx;
+	cursor: not-allowed;
+	.dk-selected {
+		&:hover {
+			border-color: inherit;
+			&:before {
+				border-top-color: inherit;
+			}
+			&:after {
+				border-left-color: inherit;
+			}
+		}
+		&:focus {
+			border-color: inherit;
+			&:before {
+				border-top-color: inherit;
+			}
+			&:after {
+				border-left-color: inherit;
+			}
+		}
+	}
+}
+select[data-dkcacheid] {
+	display: none;
+}
+.dk-select-options-highlight .dk-option-selected {
+	background-color: transparent;
+	color: inherit;
+}
+
+
+// Product select dropdowns
+.product-select {
+  .dk-selected {
+    background-color: $white;
+    border-radius: 0;
+    border: none;
+    padding: 17px 25px;
+    // dropdown arrow
+    &:before {
+      top: 44%;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 6px solid $black;
+      margin: 0px 20px 0 0;
+    }
+    &:after {
+      border: none;
+    }
+  }
+  .dk-select-open-down,
+  .dk-select-open-up {
+    .dk-selected {
+      background: $light-gray;
+    }
+    .dk-select-options {
+      background: $light-gray;
+      border-radius: 0;
+      border: none;
+    }
+    // dropdown arrow
+    .dk-selected {
+      &:before {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 6px solid $black;
+        border-top: none;
+      }
+      &:after {
+        border: none;
+      }
+    }
+  }
+  .dk-select-options {
+    padding: 0;
+    .dk-option-highlight {
+      color: $text-gray;
+      background: $grey;
+    }
+  }
+  .dk-option {
+    padding: 15px 25px;
+  }
+
+  .dk-option-selected {
+    color: $black;
+    background: $grey;
+  }
+}
+
+// Footer select dropdown
+.footer-select {
+  .dk-select {
+    width: auto;
+  }
+  .dk-selected {
+    background: $medium-gray;
+    border-radius: 0;
+    border: none;
+    padding: 10px 50px 10px 15px;
+    // dropdown arrow
+    &:before {
+      top: 44%;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 6px solid $white;
+      margin: 0px 10px 0 0;
+    }
+    &:after {
+      border: none;
+    }
+  }
+  .dk-select-open-down,
+  .dk-select-open-up {
+    .dk-selected {
+      background: $medium-gray;
+    }
+    .dk-select-options {
+      background: $medium-gray;
+      border-radius: 0;
+      border: none;
+    }
+    // dropdown arrow
+    .dk-selected {
+      &:before {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 6px solid $white;
+        border-top: none;
+      }
+      &:after {
+        border: none;
+      }
+    }
+  }
+  .dk-select-options {
+    padding: 0;
+    .dk-option-highlight {
+      color: $white;
+      background: $black;
+    }
+  }
+  .dk-option {
+    padding: 10px;
+  }
+
+  .dk-option-selected {
+    color: $white;
+    background: $black;
+  }
+}

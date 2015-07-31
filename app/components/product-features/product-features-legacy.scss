@@ -1,0 +1,79 @@
+.product-features-legacy {
+  padding:20px 10px 0;
+  .headline {
+    position: relative;
+    margin-bottom: 39px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align:center;
+    z-index: 1;
+    @media (min-width: $screen-md-min) { 
+      margin-bottom: 63px;
+      font-size: 4.375em;
+      z-index: 1;  
+    }
+  }
+  .features-list {
+    padding-bottom: 40px;
+  }
+  .feature-title {
+    font-size: 1.5em;
+  }
+  .feature-description {
+    margin-bottom: 20px;
+  }
+  .more-content {
+    display:block;
+    margin-top: 20px;
+    font-family: "Brown-Pro-Bold", Helvetica, sans-serif;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: $blue;
+    @media (max-width: $screen-md-min) {
+      margin-left: 24px;  
+    }
+  }
+  .splash-image {
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+      height: auto;  
+      max-width: 500px;
+    }
+    @media (min-width: $screen-md-min) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-right: 3%;
+      img {
+        width: 100%;
+      }  
+    }
+    @media (min-width: $screen-lg-min) {
+      margin-right: 6.85483871%;  
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    padding: 65px 10px 50px;
+    &.initialized {
+      .feature-content {
+        width: 35%;
+      }
+      .more-content {
+        display: none;
+      }
+      .features-list-item.active {
+        .more-content {
+          display: block;
+        }
+      }  
+    }
+  }
+  @media (min-width: $screen-lg-min) {
+    min-height: 800px;
+    .features-list-item {
+      margin-bottom: 34px;
+    }
+  }
+}

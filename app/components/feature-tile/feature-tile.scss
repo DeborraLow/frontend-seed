@@ -1,0 +1,94 @@
+.feature-tile {
+	position: relative;
+	background-color: $white;
+	border-top: 2px solid $light-gray;
+	padding-top: 30px;
+	height: 520px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 90px;
+		border-top: none;
+		height: 435px; 
+	}
+	@media (min-width: $screen-lg-min) {
+		height: 520px;
+	}
+
+	.feature-image {
+		position: absolute;
+		bottom: 0;
+		@media (max-width: $screen-xs-max) {
+			bottom: -50px;
+		}
+
+		@media (min-width: $screen-sm-min) {
+			top: auto;
+			bottom: -70px;	
+			right: -10px;
+		}
+
+		@media (min-width: $screen-md-min) {
+			top: auto;
+			bottom: -130px;	
+		}
+
+		@media (min-width: $screen-lg-min) {
+			top: -40px;	
+			right: 50px;
+			bottom: auto;
+		}
+	}
+
+	.feature-metadata {
+		margin: 0 20px;
+		position: absolute;
+		top: 0;	
+		@media (min-width: $screen-sm-min) {
+		  top: 30px;
+		  width: 380px;
+		}
+		@media (min-width: $screen-md-min) {
+		  top: 25px;
+		}
+		@media (min-width: $screen-lg-min) {
+		  top: 60px;
+		}
+	}
+	
+	@media (max-width: $screen-xs-max) {
+		.product-name-prefix {
+			margin: 16px 0 0 0;
+		}
+	}
+
+	.product-name {
+		font-family: "Brown-Pro-Bold";
+		text-transform: uppercase;
+		@include points("font-size", 40);
+		@include points("line-height", 18);
+
+		@media (min-width: $screen-md-min) {
+			@include points("font-size", 40);
+			@include points("line-height", 18);
+		}
+
+		@media (min-width: $screen-lg-min) {
+			@include points("font-size", 60);
+			line-height: 65px;
+		}
+	}
+
+	button.learn-more {
+		background-color: $blue;
+		border: none;
+		box-shadow: none;
+		color: $white;
+		text-transform: uppercase;
+		@include points("font-size", 12);
+		padding: 20px 30px;
+	}
+
+	.price {
+		display: inline-block;
+		padding-left: 15px;
+	}
+}

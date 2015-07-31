@@ -1,0 +1,37 @@
+{
+  "features": [
+    {
+      "id": "01",
+      "title": "Darkfield Laser Tracking",
+      "description": "The world is your mouse pad. Enjoy smooth accurate cursor control in places where optical and standard laser mice fail, like glass desks (4 mm minimum thickness) and other high-gloss surfaces.",
+      "moreContent": {
+        "cta": "Learn More",
+        "link": "http://www.logitech.com/en-us/mice-pointers/articles/11539"
+      }
+    }, {
+      "id": "02",
+      "title": "Hyper-Fast scrolling",
+      "description": "Fly through long documents and Web pages with a flick of the nearly frictionless scroll wheel. Or shift to click-to-click mode for precise, line-by-line navigation of lists, slides and images."
+    }, {
+      "id": "03",
+      "title": "Four thumb buttons",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat soluta, labore!"
+    }, {
+      "id": "04",
+      "title": "Rechargeable",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tempora ducimus, repellat consequatur? Totam aspernatur rem, maiores sed quisquam, error."
+    }, {
+      "id": "05",
+      "title": "Logitech Unifying receiver",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, reprehenderit?"
+    }, {
+      "id": "06",
+      "title": "Sculpted, right hand shape",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, sed excepturi harum."
+    }
+  ],
+  "image": {
+    "path": "/assets/images/features/performance-mouse-mx.png",
+    "description": ""
+  }
+}

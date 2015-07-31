@@ -1,0 +1,13 @@
+{
+	"logo": {
+		"src": "/assets/images/tech-quote/logo-techcrunch.png",
+		"alt": "TechCrunch Logo",
+		"width": "127",
+		"height": "16" 
+	},
+	"quote": "Finally, an iPad keyboard I can see myself using long-term.",
+	"cite": {
+		"source": "Daniel Harrington, TechCrunch",
+		"title": "TechCrunch"
+	}
+}

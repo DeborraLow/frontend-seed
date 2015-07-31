@@ -1,0 +1,86 @@
+---
+idComponent: product-hero
+---
+<div id="{{idComponent}}" class="{{bgColor}} navigation-offset">
+  <div class="container">
+    <div class="modal-369-view {{bgColor}}">
+      <a class="close-modal">Close
+        <icon class="close-x"></icon>
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="hidden-xs hidden-sm hidden-md col-md-1 col-lg-1">
+        <div class="product-thumbnails">
+          {{#product-hero.productKeyboard}}
+              {{#each thumbnails}}
+                <img class="product-thumbnail-image" data-product="{{this.index}}" src="{{this.value}}"/>
+              {{/each}}
+          {{/product-hero.productKeyboard}}
+        </div>
+      </div>
+
+      <!-- Product Images for md and lg screens -->
+      <div class="hidden-xs hidden-sm col-md-8 lg-md-8">
+        <div id="product-images">
+          {{partial "product-images"}}
+        </div>
+      </div>
+
+      <!-- For md and lg screens, the info section will show to the right -->
+      <div class="hidden-xs hidden-sm col-md-3 col-lg-3 product-description">
+          {{partial "product-info"}}
+      </div>
+
+
+      <!-- For md and lg screens, the info section will show to the right -->
+      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg product-description">
+        {{partial "product-info"}}
+      </div>
+
+      <!-- Carousel for xs screens -->
+      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+        <div id="product-carousel">
+          {{partial "product-images"}}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="product-controls col-xs-12 no-padding-lr">
+      {{#product-hero.productKeyboard}}
+      <form name="addToCart" id="add-to-cart-form" role="form" method="post" action="/">
+        <div class="product-select product-select-color">
+          <select class="dk-select-product">
+            <option>{{productSelect.colors.title}}</option>
+            {{#each productSelect.colors.options}}
+              <option>{{this.value}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="product-select product-select-device">
+          <select class="dk-select-product">
+            <option>{{productSelect.devices.title}}</option>
+            {{#each productSelect.devices.options}}
+              <option>{{this.value}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="product-select product-select-language">
+          <select class="dk-select-product">
+            <option>{{productSelect.languages.title}}</option>
+              {{#each productSelect.languages.options}}
+                <option>{{this.value}}</option>
+              {{/each}}
+          </select>
+          </select>
+        </div>
+        <input id="submit-button" type="button" value="Add to Cart">
+      </form>
+      {{/product-hero.productKeyboard}}
+      {{#product-hero.productKeyboard}}
+        <em class="visible-xs visible-sm">{{shippingInfo}}</em>
+      {{/product-hero.productKeyboard}}
+    </div>
+  </div>
+</div>

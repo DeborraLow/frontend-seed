@@ -1,0 +1,130 @@
+// @include points("font-size", 16); //where 16 is the Points spec'd in photoshop
+@mixin points($property, $target) {
+    #{$property}: ($target / 16) * 1em;
+}
+
+@mixin tracking($property, $value) {
+  #{$property}: ($value / 1000);
+}
+
+/** Courtesy of http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ **/
+@mixin vertically-centered {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horizontally-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+//Remove gutters for columns
+@mixin no-padding($side) {
+  @if $side == 'all' {
+    .no-padding {
+        padding: 0;
+    }
+  } @else if $side == 'lr' {
+    .no-padding-lr {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  } @else {
+    .no-padding-#{$side} {
+      padding-#{$side}: 0;
+    }
+  }
+}
+
+@include no-padding("left");
+@include no-padding("right");
+@include no-padding("lr");
+
+@mixin remove-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin restore-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+// Clear floating elements
+@mixin clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+// Move div outside of container grind
+@mixin breakGrid {
+  width: 100vw;
+  left: calc(-50vw + 50%);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+// Move div inside of container grind (opposite of breakGrid)
+@mixin restoreGrid {
+  width: 100%;
+  left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Standard button mixin
+@mixin btn-util($color:$yellow-green,$colorBg:$dark-gray) {
+  color: $color;
+  background-color: $colorBg;
+  border: none;
+  padding: 17px 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+// Keyframes
+@include keyframes(fadeIn) {
+  0% {
+    height: 100%;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
+}

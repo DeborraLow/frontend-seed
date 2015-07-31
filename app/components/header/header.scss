@@ -1,0 +1,47 @@
+header {
+  .header {
+  	width: 100%;
+  	min-height: 230px;
+  	color: white;
+  	display: block;
+    position: relative;
+    height: 230px;
+    @media(min-width: $screen-sm-min) { 
+      height: 500px;
+    }
+    #inner {
+      height: 230px;
+      background: url("/assets/images/hero/keyboard.png") no-repeat;
+      @media(max-width: $screen-xs-max) {
+        background-size: 75%;
+        background-position: bottom right;
+      }
+      @media(min-width: $screen-sm-min) { 
+        height: 500px;
+        background-position: 80% 100%;
+      }
+      h1 {
+        position: relative;
+        top: 50px;
+        font-size: 3em;
+        @media(min-width: $screen-sm-min) { 
+          top: 160px;
+        }
+        .prefix {
+          font-size: 2rem;
+
+          @media(min-width: $screen-lg-min) {
+            @include points("font-size", 14);
+          }
+          font-family: "Brown-Pro-Light";
+        }
+        .h1-main {
+          font-size: 4rem;
+          @media(min-width: $screen-lg-min) {
+            @include points("font-size", 44);
+          }
+        }
+      }
+    }
+  }
+}

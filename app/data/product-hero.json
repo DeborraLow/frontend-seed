@@ -1,0 +1,109 @@
+{
+  "productKeyboard": {
+    "title": "Keys-to-go",
+    "description": "Ultra-portable, stand-alone keyboard for iPad, iPhone, Apple TV and more. You're going places, take a keyboard.",
+    "units": "$",
+    "wholeAmount": "69",
+    "changeAmount": "99",
+    "shippingInfo": "Free shipping on orders over $49",
+    "view360": "360 View",
+    "viewSpecs": "View Specs",
+    "productSelect": {
+      "colors": {
+        "title": "Colors",
+        "options": [
+          {
+            "name": "color1",
+            "value": "red"
+          },
+          {
+            "name": "color2",
+            "value": "blue"
+          }
+        ]
+      },
+      "devices": {
+        "title": "Device",
+        "options": [
+          {
+            "name": "device1",
+            "value": "Mac"
+          },
+          {
+            "name": "device2",
+            "value": "Windows"
+          }
+        ]
+      },
+      "languages": {
+        "title": "Language",
+        "options": [
+          {
+            "name": "language1",
+            "value": "English"
+          },
+          {
+            "name": "language2",
+            "value": "French"
+          },
+          {
+            "name": "language3",
+            "value": "Chinese"
+          },
+          {
+            "name": "language4",
+            "value": "German"
+          }
+        ]
+      }
+    },
+    "thumbnails": [
+      {
+        "name": "image1",
+        "index": 0,
+        "value": "assets/images/product-hero/product-hero-thumbnail-1.png"
+      },
+      {
+        "name": "image2",
+        "index": 1,
+        "value": "assets/images/product-hero/product-hero-thumbnail-2.png"
+      },
+      {
+        "name": "image3",
+        "index": 2,
+        "value": "assets/images/product-hero/product-hero-thumbnail-3.png"
+      },
+      {
+        "name": "image4",
+        "index": 3,
+        "value": "assets/images/product-hero/product-hero-thumbnail-4.png"
+      }
+    ],
+    "images": [
+      {
+        "name": "image1",
+        "selectedClass": "selected",
+        "productIndex": 0,
+        "value": "assets/images/product-hero/product-hero-regular-1.png"
+      },
+      {
+        "name": "image2",
+        "selectedClass": "",
+        "productIndex": 1,
+        "value": "assets/images/product-hero/product-hero-regular-2.png"
+      },
+      {
+        "name": "image3",
+        "selectedClass": "",
+        "productIndex": 2,
+        "value": "assets/images/product-hero/product-hero-regular-3.png"
+      },
+      {
+        "name": "image4",
+        "selectedClass": "",
+        "productIndex": 3,
+        "value": "assets/images/product-hero/product-hero-regular-4.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+//default type styles
+h1,h2,h3{
+	font-family: "Brown-Pro-Bold";
+	text-transform: uppercase;
+	
+}
+
+h1{ 
+	@include points("font-size", 64);
+
+	&.h1-main{
+		@include points("font-size", 120);
+	}
+}
+
+h2{
+	@include points("font-size", 32);
+}
+

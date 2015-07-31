@@ -1,0 +1,124 @@
+// Compare layout is only for desktop cap at 950 like the current Logitech site
+.static-width {
+  @include clearfix;
+  min-width: 950px;
+  @media (max-width: $screen-md-min) {
+    margin: 0 10px;
+  }
+}
+
+.shim{
+  //background-color: red;
+  visibility: hidden;
+  left: 0;
+}
+
+#compare-product-tiles, #compare-product-tiles-shim {
+  @include clearfix;
+  padding: 30px 0 36px;
+  overflow: hidden;
+  z-index: 99;
+
+  &.lock-sub-nav {
+    position: fixed;
+    left: 0;
+    background-color: $white;
+    width: 100%;
+    .static-width {
+      padding: 0;
+    }
+  }
+}
+
+.compare-product-tile {
+  margin-right: 20px;
+  padding: 0;
+  width: 190px;
+  float: right;
+
+  &:first-child {
+    margin-right: 0;
+  }
+}
+
+//Compare Page Feature Grid
+.compare-grid-header {
+  height: 60px;
+  background-color: $light-gray;
+  padding-top: 18px;
+  text-align: center;
+  .svg-uarr {
+    float: right;
+    margin-top: 5px;
+    &.svg-darr {
+      @include transform(rotate(180deg));
+    }
+  }
+}
+
+.grid-header-title {
+  cursor: pointer;
+  @include points("font-size", 14);
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 125px;
+}
+
+.compare-feature-grid {
+  position: relative;
+  &.lock-sub-nav {
+    margin-top: 410px;
+  }
+}
+
+.inner-container::-webkit-scrollbar {
+  display: none;
+}
+
+.compare-grid-features {
+  padding: 0 0 30px;
+}
+
+.compare-learn-more  {
+  @include points("font-size", 12);
+  text-transform: uppercase;
+  color: $blue;
+  cursor: pointer;
+}
+
+.compare-product-image {
+  height: 160px;
+  padding: 8px 0 0 0;
+  margin-bottom: 10px;
+  text-align: center;
+  img {
+    max-height: 125px;
+  }
+  a {
+    outline: 0;
+  }
+}
+
+.compare-product-remove {
+  color: $white;
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 11px;
+}
+
+.compare-product-price {
+  @include points("font-size", 17);
+  font-family: "Brown-Pro-Light";
+  padding-top: 2px;
+  height: 30px;
+  &.strikethrough {
+    float: left;
+  }
+}
+
+.compare-product-name {
+  @include points("font-size", 15);
+  padding-top: 10px;
+}

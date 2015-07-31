@@ -1,0 +1,15 @@
+---
+component: related-products
+hideCompareCheck: true
+---
+
+<div class="{{component}} container">
+  <h3>Related Products</h3>
+  {{#related-products}}
+  <div class="owl-carousel related-products-carousel">
+    {{#each product}}
+        {{partial "product-tile" this}} 
+    {{/each}}
+  </div>
+  {{/related-products}}
+</div>

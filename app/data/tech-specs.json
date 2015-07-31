@@ -1,0 +1,94 @@
+{
+  "specs": {
+    "system": {
+      "name": "System Requirements",
+      "value": "Works with all iOS devices including iPad, iPhone and Apple TV"
+    },
+    "dimensions": {
+      "name": "Dimensions",
+      "link": "http://www.google.com",
+      "detail": {
+        "name": "Detail"  
+      },
+      "details": [
+        {
+          "name": "Height",
+          "value": "5.39in (137mm)"
+        },
+        {
+          "name": "Width",
+          "value": "9.53in (242mm)"
+        },
+        {
+          "name": "Depth",
+          "value": "0.0.24in (6mm)"
+        },
+        {
+          "name": "Weight",
+          "value": "6.35oz (180g)"
+        }
+      ]
+    },
+    "warranty": {
+      "name": "Warranty Information",
+      "value": "1-Year Limited Hardware Warranty"
+    },
+    "package": {
+      "name": "Package Contents",
+      "details": [
+        {
+          "name": "keyboard",
+          "value": "Keyboard"
+        },
+        {
+          "name": "cables",
+          "value": "USB Cable"
+        },
+        {
+          "name": "manual",
+          "value": "Documentation"
+        },
+        {
+          "name": "id",
+          "value": "Part Number"
+        },
+        {
+          "id": "blackId",
+          "name": "Black",
+          "value": "PN 920-006701"
+        },
+        {
+          "id": "redId",
+          "name": "Red",
+          "value": "PN 920-006722"
+        },
+        {
+          "id": "tealId",
+          "name": "Teal",
+          "value": "PN 920-006873"
+        }
+      ]
+    },
+    "technical": {
+      "name": "Technical Specifications",
+      "details": [
+        {
+          "name": "keyboard",
+          "value": "Mechanical Keyboard capability"
+        },
+        {
+          "name": "response",
+          "value": "Kinematic tap response time"
+        },
+        {
+          "name": "material",
+          "value": "Space aged keyboard materials"
+        },
+        {
+          "name": "colors",
+          "value": "Optional colors and custom colors available"
+        }
+      ]
+    }
+  }
+}

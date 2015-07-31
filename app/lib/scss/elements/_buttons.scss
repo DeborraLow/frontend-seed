@@ -1,0 +1,12 @@
+//Style for the learn more type buttons.
+.learn-more {
+	@include label-small-uppercase;
+	@include btn-util;
+	margin-top: 10px;
+
+	&.gaming-grey{
+		background-color: $medium-gray;
+		color: $white;
+
+	}
+}

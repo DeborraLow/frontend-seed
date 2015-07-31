@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" class="{{id}}" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Logitech</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/sprite.css">
+    <script src="head.js"></script>
+  </head>
+  <body class="{{id}}">
+    <!--[if lt IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    {{#is headerType "none"}}
+    {{else}}
+      {{#is headerType "short"}}
+        {{partial "short-header"}}
+      {{else}}
+        {{partial "mobile-nav" }}
+        {{partial "global-navbar" }}
+      {{/is}}
+    {{/is}}
+    <main>
+      {% body %}
+    </main>
+    {{#isnt footerType "none"}}
+      {{partial "footer"}}
+    {{/isnt}}
+
+    <!-- load concatenated scripts managed by browserify -->
+    <script src="main.js"></script>
+  </body>
+</html>

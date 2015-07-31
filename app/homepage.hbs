@@ -1,0 +1,31 @@
+---
+title: Homepage
+id: home
+bgColor:
+---
+
+<article id="panel-stack">
+
+  {{#each homepage-sliding-panels.panels}}
+    {{partial "homepage-sliding-panel" this}}
+  {{/each}}
+
+  <!-- This is the section for the last, non-page piling normal scrolling content-->
+  <section id="six" class="section last-panel"></section>
+
+</article>
+
+<div id="seven">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <div class="row home-category-grid-tiles">
+          {{#each home-category-grid-tiles.tiles}}
+            {{partial "home-category-grid-tile" this}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,40 @@
+{
+  "product": [
+    {
+      "id": "001",
+      "name": "MX Master",
+      "image-filename": "mx-master.png",
+      "price": "99.99",
+      "description": "This is a placeholder",
+      "tile-color": "pink",
+      "reverse-colors": "reverse-colors",
+      "product-type": "mice",
+      "filters": ["f143","f31","f1278"],
+      "color-swatches": ["#2a2a2c"]
+    },
+    {
+      "id": "002",
+      "name": "Wireless Mini Mouse M187",
+      "image-filename":  "02.png",
+      "price": "24.99",
+      "description": "This is a placeholder",
+      "tile-color": "yellow-green",
+      "reverse-colors": "",
+      "product-type": "mice",
+      "filters": ["f143","f31"],
+      "color-swatches": ["#2a2a2c", "#a9a9a8", "#173f8f", "#d63b38"]
+    },
+    {
+      "id": "003",
+      "name": "Keys-To-Go",
+      "image-filename": "03.png",
+      "price": "69.99",
+      "description": "This is a placeholder",
+      "tile-color": "light-aqua",
+      "reverse-colors": "",
+      "product-type": "keyboards",
+      "filters": ["f143","f31"],
+      "color-swatches": ["#2a2a2c", "#a9a9a8", "#173f8f", "#d63b38"]
+    }
+  ]
+}

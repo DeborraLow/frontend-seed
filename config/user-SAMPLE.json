@@ -1,0 +1,9 @@
+{
+  "project": {
+    "tasks": {
+      "browserSync": {
+        "open": false 
+      }
+    }
+  }
+}

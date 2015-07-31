@@ -1,0 +1,85 @@
+---
+component: tech-specs
+---
+<div class="{{component}}">
+
+  <div class="tech-specs-header container">
+    <h6>Tech Specs <i class="svg-uarr svg-uarr-dims"></i></h6>
+  </div>
+
+  {{#tech-specs.specs}}
+    <div class="tech-specs-body container">
+      <ul class="tech-specs-details">
+        <!-- System Requirements -->  
+        <li class="tech-specs-detail row">
+          <div class="detail-title col-sm-4">
+            <h4 class="spec-label">{{system.name}}</h4>
+          </div>
+          <div class="details-description col-sm-6">
+            <p>{{system.value}}</p> 
+          </div>
+        </li>
+        <!-- Dimensions -->
+        <li class="tech-specs-detail row">
+          <div class="detail-title col-sm-4">
+            <h4 class="spec-label">{{dimensions.name}}</h4>
+            <button class="modal-button" data-toggle="modal" data-target="#dimensions-modal">See Visual</button>
+          </div>
+          <div class="details-description col-sm-6">
+            <ul>
+            {{#each dimensions.details}}
+              <li>
+                <span class="name">{{name}}:</span>
+                <span class="value">{{value}}</span>
+              </li>
+            {{/each}}  
+            </ul>
+          </div>  
+        </li>
+        <!-- Warranty Information -->
+        <li class="tech-specs-detail row">
+          <div class="detail-title col-sm-4">
+            <h4 class="spec-label">{{warranty.name}}</h4>
+          </div>
+          <div class="details-description col-sm-6">
+             <p>{{warranty.value}}</p>
+          </div>
+        </li>
+        <!-- Package Contents -->
+        <li class="tech-specs-detail row">
+          <div class="detail-title col-sm-4">
+            <h4 class="spec-label">{{package.name}}</h4>
+          </div>
+          <div class="details-description col-sm-6">
+            <ul>
+              {{#each package.details}}
+                <li>
+                  {{#if id}}
+                      <span class="name">{{name}}:</span>
+                      <span class="value">{{value}}</span>
+                  {{else}}
+                    <span class="value">{{value}}</span>
+                  {{/if}}  
+                  </li>
+              {{/each}}  
+            </ul>
+          </div>
+        </li>
+        <!-- Technical Specifications -->
+        <li class="tech-specs-detail row">
+          <div class="detail-title col-sm-4">
+            <h4 class="spec-label">{{technical.name}}</h4>
+          </div>
+          <div class="details-description col-sm-6">
+            <ul>
+            {{#each technical.details}}
+              <li><span class="value">{{value}}</span></li>
+            {{/each}}
+          </div>
+            </ul>
+        </li>
+      </ul>
+    </div>
+  {{/tech-specs.specs}}
+
+</div>

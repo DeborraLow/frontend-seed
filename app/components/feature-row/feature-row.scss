@@ -1,0 +1,25 @@
+.compare-grid-feature {
+  border-bottom: 1px solid $light-gray;
+  padding: 18px 0;
+}
+
+.compare-feature-name {
+  @include points("font-size", 14);
+  display: inline-block;
+  font-family: "Helvetica", sans-serif;
+  padding: 0;
+  width: 17%;
+}
+
+.compare-feature-checked {
+  display: inline-block;
+  height: 20px;
+  float: right;
+  text-align: center;
+  width: 20%;
+  padding-left: 0;
+  padding-right: 0;
+  .svg-check {
+    margin: 0 auto;
+  }
+}

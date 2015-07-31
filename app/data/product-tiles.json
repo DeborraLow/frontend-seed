@@ -1,0 +1,137 @@
+{
+  "tiles": [
+    {
+      "id": "001",
+      "name": "MX Master",
+      "image-filename":  "mx-master.png",
+      "price": "99.99",
+      "description": "Lorem ipsum dolor sit amet, consectetur",
+      "tile-color": "pink",
+      "reverse-colors": "reverse-colors",
+      "product-type": "mice",
+      "filters": ["f143","f31","f1278"],
+      "color-swatches": ["black"]
+    },
+    {
+      "id": "002",
+      "name": "Wireless Mini Mouse M187",
+      "image-filename":  "02.png",
+      "price": "24.99",
+      "description": "Lorem ipsum dolor sit amet",
+      "tile-color": "yellow-green",
+      "reverse-colors": "",
+      "product-type": "mice",
+      "filters": ["f143","f31","f1278"],
+      "color-swatches": ["black", "grey", "blue", "red"]
+    },
+    {
+      "id": "003",
+      "name": "Keys-To-Go",
+      "image-filename": "03.png",
+      "price": "69.99",
+      "description": "Lorem ipsum dolor sit amet",
+      "tile-color": "teal",
+      "reverse-colors": "",
+      "product-type": "keyboards",
+      "filters": ["f143","f31"],
+      "color-swatches": ["black", "grey", "blue", "red"]
+    },
+    {
+      "id": "004",
+      "name": "Wireless Presenter R400",
+      "image-filename": "04.png",
+      "price": "49.99",
+      "discounted-price": "35.99",
+      "description": "Lorem ipsum dolor sit amet",
+      "tile-color": "yellow-green",
+      "reverse-colors": "",
+      "product-type": "presenters",
+      "filters": ["f143","f31"],
+      "color-swatches": ["black", "grey", "blue", "red"]
+    },
+    {
+      "id": "005",
+      "name": "Wireless Mouse M320",
+      "image-filename": "05.png",
+      "price": "29.99",
+      "description": "Lorem ipsum dolor sit amet",
+      "tile-color": "teal",
+      "reverse-colors": "",
+      "product-type": "mice",
+      "filters": ["f143","f31"],
+      "color-swatches": ["black", "grey", "blue", "red"]
+    },
+    {
+      "id": "006",
+      "name": "Bluetooth Multi-Device Keyboard K480",
+      "image-filename": "06.png",
+      "price": "49.99",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      "tile-color": "pink",
+      "reverse-colors": "reverse-colors",
+      "product-type": "keyboards",
+      "filters": ["f143","f31"],
+      "color-swatches": ["black", "grey"]
+    },
+    {
+      "id": "007",
+      "name": "Wireless Trackball M570",
+      "image-filename": "07.png",
+      "price": "99.99",
+      "description": "Lorem ipsum dolor sit amet",
+      "tile-color": "purple",
+      "reverse-colors": "reverse-colors",
+      "product-type": "mice",
+      "filters": ["f143","f31"],
+      "color-swatches": ["black", "grey", "blue", "red"]
+    },
+    {
+      "id": "008",
+      "name": "Wireless Headset H600",
+      "image-filename": "08.png",
+      "price": "24.99",
+      "description": "Lorem ipsum dolor sit amet",
+      "tile-color": "light-blue",
+      "reverse-colors": "reverse-colors",
+      "product-type": "headsets",
+      "filters": ["f143","f31"],
+      "color-swatches": ["black", "grey", "blue", "red"],
+      "pre-order": "true"
+    },
+    {
+      "id": "009",
+      "name": "UE Megaboom",
+      "image-filename": "09.png",
+      "price": "299.99",
+      "description": "Lorem ipsum dolor sit amet",
+      "tile-color": "medium-blue",
+      "reverse-colors": "reverse-colors",
+      "product-type": "pc-speakers",
+      "filters": ["f143"],
+      "color-swatches": ["black", "grey", "blue", "red"]
+    },
+    {
+      "id": "010",
+      "name": "test tenth product",
+      "image-filename": "07.png",
+      "price": "99.99",
+      "description": "Lorem ipsum dolor sit amet",
+      "tile-color": "yellow-green",
+      "product-type": "mice",
+      "filters": ["f143","f31"],
+      "color-swatches": ["black", "grey", "blue", "red"]
+    },
+    {
+      "id": "011",
+      "name": "test 11th product",
+      "image-filename": "07.png",
+      "price": "99.99",
+      "description": "Lorem ipsum dolor sit amet",
+      "tile-color": "pink",
+      "reverse-colors": "reverse-colors",
+      "product-type": "mice",
+      "filters": ["f143","f31"],
+      "color-swatches": ["black", "grey", "blue", "red"]
+    }
+  ]
+}

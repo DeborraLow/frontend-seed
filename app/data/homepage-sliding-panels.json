@@ -1,0 +1,60 @@
+{
+  "panels": [
+    {
+      "id": "slide1",
+      "panel-type": "product-overlap",
+      "panel-copy-classes": "col-xs-12 col-md-10 col-md-offset-1 no-padding-lr",
+      "prefix-headline": "The possibility machine.",
+      "headline": "MXMASTER",
+      "headline-class": "full",
+      "background-color": "red-bg",
+      "image-filename": "mxmaster.png",
+      "image-classes": "product-image",
+      "first-panel": "first-panel"
+    },
+    {
+      "id": "slide2",
+      "panel-type": "product-two-rows",
+      "panel-copy-classes": "col-xs-12 col-md-10 col-md-offset-1 no-padding-lr",
+      "prefix-headline": "Unique styles just for you.",
+      "headline": "COLOR COLLECTION",
+      "headline-class": "",
+      "background-color": "pink-bg",
+      "image-filename": "colorcollection.png",
+      "image-classes": "product-image product-image-right"
+    },
+    {
+      "id": "slide3",
+      "panel-type": "product-underlap",
+      "panel-copy-classes": "col-xs-12 col-md-10 col-md-offset-1 no-padding-lr",
+      "prefix-headline": "Performance edition gaming mouse.",
+      "headline": "DAEDALUS APEX",
+      "headline-class": "full",
+      "background-color": "gaming-gray-bg",
+      "image-filename": "daedalus.png",
+      "image-classes": "product-image",
+      "button-class": "gaming-grey"
+    },
+    {
+      "id": "slide4",
+      "panel-type": "product-overlap text-left-product-right",
+      "panel-copy-classes": "col-xs-12 col-md-5 col-md-offset-1 no-padding-lr",
+      "prefix-headline": "Strong. Easy. Portable.",
+      "headline": "BEMO",
+      "headline-class": "full",
+      "background-color": "purple-bg",
+      "image-filename": "bemo.png",
+      "image-classes": "product-image product-image-right-sm"
+    },
+    {
+      "id": "slide5",
+      "panel-type": "krypto product-overlap",
+      "panel-copy-classes": "col-xs-12 col-md-5 pull-right no-padding-lr",
+      "prefix-headline": "Security that blends in.",
+      "headline": "KRYPTO",
+      "headline-class": "full",
+      "background-color": "purple-bg",
+      "image-bg": "krypto.png"
+    }
+  ]
+}

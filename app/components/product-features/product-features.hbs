@@ -1,0 +1,20 @@
+---
+component: product-features
+---
+<div class="{{component}} container">
+  {{#product-features}}
+  <ul class="features-list">
+    {{#each features }}
+    <li class="features-list-item">
+      	<h3 class="feature-title"><i class="svg-uarr svg-uarr-dims"></i> {{title}}</h3>
+    	<div class="feature-content">
+    		<p class="feature-description">{{description}}</p>
+	      	<div class="feature-image has-more-content">
+	      		<img src="{{image.path}}" alt="{{image.description}}">
+	      	</div>	
+    	</div>
+    </li>
+    {{/each}}
+  </ul>
+  {{/product-features}}
+</div>

@@ -1,0 +1,14 @@
+---
+component: tech-quote
+---
+<div class="{{component}}">
+  <div class="container">
+  	{{#tech-quote}}
+        <blockquote class="col-xs-12 col-md-7 col-lg-7 center-block float-none text-center">
+      			<img class="logo" src="{{logo.src}}" alt="{{logo.alt}}" width="{{logo.width}}" height="{{logo.height}}">
+      			<p class="quote">&quot;{{quote}}&quot;</p>
+          	<cite class="cite" title="{{cite.title}}">{{cite.source}}</cite>
+        </blockquote>
+    {{/tech-quote}}
+  </div>
+</div>

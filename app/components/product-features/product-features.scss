@@ -1,0 +1,189 @@
+.product-features {
+  position: relative;
+  padding: 50px 10px;
+  background-color: $dark-gray;
+  color: $white;
+  overflow:hidden;
+  .features-list {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+  }
+  .features-list-item {
+    margin-bottom: 32px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @media (min-width: $screen-lg-min) {
+      margin-bottom: 44px;  
+    }
+  }
+  .feature-title {
+    position: relative;
+    font-size: 1.625em;
+    color: $yellow;
+    &:before {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 11px solid $yellow;
+        z-index: 1;
+        padding: 0;
+        margin: -8px 0 0 -22px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    @media (min-width: $screen-md-min) {
+      font-size: 2em;  
+    }
+  }
+  .feature-description {
+    margin-bottom: 34px;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    line-height: 1.714285714em;
+    color: $gray;  
+  }
+  .feature-image {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .has-more-content {
+    position:relative;
+    cursor: pointer;
+    &:before {
+      content: " ";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 12px solid $black;
+      z-index: 1;
+      padding: 0;
+      margin: -8px 0 0 -5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;  
+    }
+    &:after {
+      content: " ";
+      display: block;
+      width: 46px;
+      height: 46px;
+      background: $white;
+      border-radius: 50%;
+      margin: -23px 0 0 -23px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    @media (min-width: $screen-lg-min) {
+      &:before {
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 15px solid $black;
+        margin: -10px 0 0 -5px;  
+      }
+      &:after {
+        width: 60px;
+        height: 60px;
+        margin: -30px 0 0 -30px;
+      }
+    }
+  }
+  &.initialized {
+    .feature-title {
+      cursor: pointer;
+    }
+    @media (max-width: $screen-md-min) {
+      // FUNCTIONALITY
+      .feature-content {
+        display: none;
+      }
+      .features-list-item.open {
+        .feature-content {
+          display: block;
+        }
+        .feature-title {
+          color: $white;
+          &:before {
+            border-left: 11px solid $white;
+            @include transform(rotate(90deg));
+          }
+        }
+      }
+    }
+    @media (min-width: $screen-md-min) {
+      position: relative;
+      .features-list-item {
+        padding-left: 8.467741935%;
+      }
+      .feature-content {
+        width: 23.790322581%;
+      }
+      .feature-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 57.6612903%;
+        overflow:hidden;
+      }
+      // FUNCTIONALITY
+      .feature-description {
+        display: none;
+      }
+      .feature-image {
+        top:-100%;
+        opacity: .5;
+        @include transition(opacity 500ms ease, top 50ms ease 500ms);
+        z-index: 1;
+      }
+      .features-list-item.active {
+        .feature-title {
+          color: $white;
+          cursor: default;
+          &:before {
+            border-left: 11px solid $white;
+            @include transform(rotate(90deg));
+          }
+        }
+        .feature-description {
+          display: block;
+        }
+        .feature-image {
+          top:0;
+          opacity: 1;
+          @include transition(top 500ms ease-in-out);
+          z-index: 10;
+        }
+      }
+      .features-list-item.active ~ .features-list-item {
+        .feature-image {
+          top:100%;  
+        }
+      } 
+    }
+  }
+  @media (max-width: $screen-md-min) {
+    .feature-title,
+    .feature-description {
+      margin-left: 24px;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    min-height: 400px;
+    margin:100px auto 0;
+  }
+  @media (min-width: $screen-lg-min) {
+    min-height: 600px;
+    padding: 165px 0 0;
+  }
+}

@@ -1,0 +1,41 @@
+---
+id: product-tile
+--- 
+<a href="pdp.html" data-product-type="{{product-type}}" data-price="{{#if discounted-price}}{{discounted-price}}{{else}}{{price}}{{/if}}" data-filters="{{filters}}" class="col-xs-12 col-sm-6 col-md-6 col-lg-4 product-tile included {{reverse-colors}}">
+	<div class="product-image {{tile-color}}-bg">
+		<img src="/assets/images/product-tiles/{{image-filename}}">
+	</div>
+	<div class="product-meta">
+		<div class="product-info">
+			<span class="product-name">{{name}}</span><br>
+			<span class="product-description">{{description}}<br></span>
+			{{#if discounted-price}}
+				<span class="strikethrough">
+					<span class="price"><sup>$</sup>{{price}}</span>
+				</span>
+				<span class="price"><sup>$</sup>{{discounted-price}}</span>
+			{{else}}
+			<span class="price"><sup>$</sup>{{price}}</span>
+			{{/if}}
+			<ul class="color-swatches-mobile visible-xs">
+			{{#each color-swatches}}
+			<li class="color-swatch"><img src="/assets/images/color-swatches/{{this}}.png"></li>
+			{{/each}}
+		</ul>	
+		</div>
+		<ul class="color-swatches hidden-xs">
+			{{#each color-swatches}}
+			<li class="color-swatch"><img src="/assets/images/color-swatches/{{this}}.png"></li>
+			{{/each}}
+		</ul>	
+		{{#unless hideCompareCheck}}
+			<div class="compare-checkbox-group">
+				<input class="compare-checkbox" type="checkbox" name="compare" id="cb_{{id}}">
+				<label class="compare-checkbox-label" for="cb_{{id}}">Compare</label>
+			</div>
+		{{/unless}}
+	</div>
+  {{#if pre-order}}
+  	<div class="pre-order">PRE-ORDER</div>
+  {{/if}}
+</a> 

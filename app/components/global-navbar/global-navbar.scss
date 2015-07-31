@@ -1,0 +1,83 @@
+#global-navbar {
+	padding-top: 20px;
+	@media (min-width: $screen-md-min) {
+		padding-top: 30px;
+	}
+	display: block;
+	position: fixed;
+	width: 100%;
+	min-height: 60px;
+	@media(min-width: $screen-sm-min) { 
+		height: 105px;
+	}
+	color: white;
+	z-index: 2000;
+	top: 0;
+	right: 0;
+	left: 0;
+	#nav-icon {
+		margin-left: 20px;
+		position: absolute;
+		top: -35px;
+		opacity: .5;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	#logo-container {
+		position: absolute;
+		margin: 0 auto;
+		@include horizontally-centered;
+		@media(max-width: $screen-xs-max) { 
+			img {
+				width: 100px;
+			}
+		}
+	}
+	.utility-nav {
+		margin-right: 20px;
+		ul{
+			list-style-type: none;
+			li {
+				display: block;
+				float: left;
+				@include points("padding-left", 20); 
+			}
+		} 
+	}
+}
+
+#subnav {
+	&.initial-transparency {
+		background-color: transparent !important; //keep important. it overrrides default at 0 scroll
+	}
+	position: fixed;
+	overflow: hidden;
+	height: 35px;
+	width: 100%;
+	border-bottom: 2px solid $whiteTwentyPercent;
+	text-transform: uppercase;
+	white-space: nowrap;
+	z-index: 1999;
+	@include points("font-size", 14);
+	margin-bottom: 20px;
+	text-align: center;
+	.links {
+		a {
+			@media(min-width: $screen-lg-min) { 
+				opacity: .9;
+				&:hover {
+					opacity: 1;
+				}
+			}
+			color: white;
+			text-decoration: none;
+			padding: 20px;
+		}
+	}
+}
+
+// //override the motion on home page. this is always visible.
+// body.home.scrolljacked #subnav {
+// 	top: 105px !important;
+// }

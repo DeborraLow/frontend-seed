@@ -1,0 +1,156 @@
+#product-hero {
+  .product-thumbnails {
+    margin: 100% 0 0 0;
+    .product-thumbnail-image {
+      padding: 10px 0;
+    }
+  }
+  #product-images {
+    .product-image {
+      opacity: 0;
+      top: 0;
+      left: 0;
+      height: 0;
+      &.selected {
+        @include animation(fadeIn 1s forwards);
+      }
+    }
+  }
+  .product-controls {
+    @include breakGrid;
+    background: $white;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    @media (min-width: $screen-sm-max) {
+      @include restoreGrid;
+      background: transparent;
+      margin-top: 90px;
+      margin-bottom: 20px;
+      padding-bottom: 0;
+    }
+
+    em {
+      margin-top: 10px;
+      text-align: center;
+      @media (min-width: $screen-sm-max) {
+        margin-top: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  #add-to-cart-form {
+    display: block;
+    width: 100%;
+    @media (min-width: $screen-sm-max) {
+      display: inline-block;
+      float: right;
+      width: auto;
+    }
+  }
+
+  .product-select {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    @media (min-width: $screen-sm-max) {
+      display: inline-block;
+      float: left;
+      width: auto;
+    }
+
+    .dk-select {
+      @media (max-width: $screen-sm-max) {
+        width: 100%;
+      }
+    }
+  }
+
+  #submit-button {
+    @include label-small-uppercase;
+    @include btn-util($white,$grey);
+    display: block;
+    width: 100%;
+
+    @media (min-width: $screen-sm-max) {
+      display: inline-block;
+      float: right;
+      margin: 0 0 0 20px;
+      width: auto;
+    }
+  }
+
+  .color-swatch {
+    display: block;
+    &.red {
+      background: #d63b38;
+    }
+    &.blue {
+      background: #00829e;
+    }
+    &.black {
+      background: $black;
+    }
+  }
+  
+  .product-title {
+    @include points("font-size", 41);
+    font-family: "Brown-Pro-Regular";
+  }
+
+  .product-description {
+    text-align: center;
+    margin: 0 0 50px 0;
+    @media (min-width: $screen-sm-max) {
+      float: right;
+      text-align: left;
+      margin: 0;
+    }
+    .price {
+      @include points("font-size", 26);
+      font-family: "Brown-Pro-Light";
+    }
+
+    p {
+      @include body-copy;
+    }
+
+    .product-view {
+      @include clearfix;
+      @include label-small-uppercase;
+      @include points("font-size", 14);
+      margin: 30px 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        float: left;
+        margin: 0 30px 10px 0;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        a {
+          display: block;
+          color: $white;
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        icon {
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+
+  .modal-369-view {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+}

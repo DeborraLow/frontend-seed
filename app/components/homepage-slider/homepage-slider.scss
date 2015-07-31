@@ -1,0 +1,353 @@
+
+body.home {
+ 	article {
+    height: 100%;
+    color: black;
+  }
+}
+
+.panel-page {
+  // Hide onload for FF arrow keys to work
+	display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Styles for modern browsers
+section {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: translate3d(0, 0, 0);
+	color: white;
+
+	.panel-text {
+		position: relative;
+		.panel-text-transform {
+			position: relative;
+			left: 0px;
+			right: 0px;
+			margin: 0;
+			@media (min-width: $screen-md-min) {
+				top: 100px;
+			}
+		}
+	}
+
+	.product-image {
+		img {
+			width: 100%;
+			position: relative;
+		}
+	}
+
+  &.cover-background {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+	//Applies to all headers and subheaders for panels
+	h1,
+	h2 {
+		@include tracking("letter-spacing", 40);
+		text-transform: uppercase;
+		font-family: "Brown-Pro-Bold";
+		margin-top: 0;
+		margin-bottom: 0;
+    width: 90%;
+    margin: 0 auto;
+    @media (min-width: $screen-md-min) {
+      width: 100%;
+		  margin-left: -8px;
+    }
+		&.full {
+			@include points("font-size", 50);
+			font-size: 15vw;
+			line-height: normal;
+			white-space: nowrap;
+			@media (min-width: $screen-md-min) {
+				@include points("font-size", 100);
+				font-size: 8vw;
+			}
+			@media (min-width: $screen-lg-min) {
+				@include points("font-size", 150);
+				font-size: 8vw;
+			}
+		}
+	}
+
+	h3.eye-brow {
+		@include points("font-size", 22);
+		font-family: "Brown-Pro-Light";
+		width: 80%;
+		margin: 0 auto;
+		@media (min-width: $screen-md-min) {
+			@include points("font-size", 28);
+			width: 100%;
+		}
+	}
+
+	&.product-underlap {
+		.container {
+			.panel-copy {
+				margin-top: 90px;
+				text-align: center;
+				@media (min-width: $screen-sm-min) {
+					margin-top: 150px;
+				}
+				@media (min-width: $screen-md-min) {
+					margin-top: 300px;
+					text-align: left;
+					position: relative;
+					height: 528px;
+				}
+
+				h1,
+				h2 {
+					&.full {
+						@include points("font-size", 20);
+						font-size: 11vw;
+						white-space: nowrap;
+						@media (min-width: $screen-md-min) {
+							@include points("font-size", 50);
+							font-size: 9vw;
+						}
+						@media (min-width: $screen-lg-min) {
+							@include points("font-size", 100);
+							font-size: 9vw;
+						}
+					}
+				}
+
+			.product-image {
+				margin: 45px auto 0;
+				float: none;
+				@media (min-width: $screen-md-min) {
+					width: 580px;
+					position: absolute;
+					right: 230px;
+					top: -65px;
+					z-index: -10;
+				}
+				img {
+					width: 65%;
+					@media (min-width: $screen-md-min) {
+						width: 100%;
+					}
+				}
+			}
+		}
+		}
+	}
+
+	&.product-overlap {
+		.container {
+			.panel-copy {
+				margin-top:90px;
+				text-align: center;
+				@media (min-width: $screen-sm-min) {
+					margin-top: 150px;
+				}
+				@media (min-width: $screen-md-min) {
+					text-align: left;
+					position: relative;
+					margin-top: 300px;
+					height: 528px;
+				}
+				h1 {
+					&.full {
+						@include points("font-size", 50);
+						font-size: 15vw;
+						white-space: nowrap;
+						@media (min-width: $screen-md-min) {
+							@include points("font-size", 100);
+							font-size: 12vw;
+						}
+						@media (min-width: $screen-lg-min) {
+							@include points("font-size", 150);
+							font-size: 12vw;
+						}
+						//Fits pagepiling pages on mobile in landscape
+						@media (min-width: 567px) 
+							and (max-width:668px)
+							and (orientation: landscape){
+							font-size: 3em !important;
+							line-height: 1 !important;
+						}
+					}
+				}
+				//Aiming for a mobile first styling approach with specified styles for large
+				//May be able to move out of the #panel-stack nest but have left for now
+				.product-overlap-head {
+					@include points("font-size", 55.53);
+					margin-top: 0;
+					margin-bottom: 0;
+					@media (min-width: $screen-md-min) {
+						line-height: .8em;
+						margin-left: -12px;
+					}
+				}
+
+				.product-overlap-subhead {
+					@include points("font-size", 22);
+					margin-top: 10px;
+					margin-bottom: 10px;
+					@media (min-width: $screen-md-min) {
+						@include points("font-size", 28);
+					}
+				}
+
+				.product-image {
+					margin: 45px auto 0;
+
+					@media (min-width: $screen-md-min) {
+						width: 580px;
+						margin-top: 0;
+						position: absolute;
+						right: 105px;
+						top: -65px;
+					}
+
+					img {
+						width: 65%;
+						@media (min-width: $screen-md-min) {
+							width: 100%;
+						}
+					}
+				}
+
+				.product-image-right-sm {
+					margin: 45px auto 0;
+
+					@media (min-width: $screen-md-min) {
+						width: 420px;
+					  position: absolute;
+					  right: 149px;
+					  top: -60px;
+					}
+
+					img {
+						width: 65%;
+						@media (min-width: $screen-md-min) {
+							width: 100%;
+						}
+					}
+				}
+
+			}
+		}
+	}
+
+	&.product-two-rows {
+		.container {
+			height: 100%;
+			overflow: hidden; //Prevents images from leaking on page piling
+			.panel-copy {
+				margin-top: 90px;
+				text-align: center;
+				@media (min-width: $screen-sm-min) {
+					margin-top: 150px;
+				}
+				@media (min-width: $screen-md-min) {
+					margin-top: 150px;
+					text-align: left;
+					position: relative;
+					height: 782px;
+					padding-top: 302px;
+					margin-top: 0;
+				}
+
+				h1,h2 {
+					@media (min-width: $screen-md-min) {
+						@include points("font-size", 120);
+						line-height: .95em;
+					}
+				}
+
+				h3 {
+					@media (max-width: $screen-xs-max) {
+						@include points("font-size", 22);
+					}
+				}
+
+				.product-overlap-head {
+					@include points("font-size", 42);
+					&:nth-of-type(1) {
+						margin-bottom: 2px;
+					}
+					@media (min-width: $screen-md-min) {
+						@include points("font-size", 120);
+					}
+				}
+			}
+		}
+	}
+
+	// .gaming-grey specific styles
+	&.gaming-gray-bg {
+		color: $medium-blue;
+		.product-overlap-head {
+			@include points("font-size", 37);
+		}
+	}
+
+	&#slide5 {
+	  &.krypto {
+			h1 {
+				&.full {
+					@include points("font-size", 20);
+					font-size: 15vw;
+					white-space: nowrap;
+					@media (min-width: $screen-md-min) {
+						@include points("font-size", 50);
+						font-size: 10vw;
+					}
+					@media (min-width: $screen-lg-min) {
+						@include points("font-size", 100);
+						font-size: 10vw;
+					}
+				}
+			}
+		}
+	}
+
+	&#slide6 {
+		overflow: scroll !important;
+		color: black;
+		background-color: white;
+	}
+
+}
+
+.product-image-right {
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	@media (min-width: $screen-md-min) {
+		width: 215px;
+	}
+
+	@media (min-width: $screen-md-min) {
+		width: 385px;
+		float: right;
+		margin-top: 0;
+		position: absolute;
+		top: 310px;
+		right: 40px;
+	}
+
+	img {
+		width: 65%;
+		@media (min-width: $screen-md-min) {
+			width: 100%;
+		}
+	}
+}
+

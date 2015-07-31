@@ -1,0 +1,23 @@
+---
+title: Nav Category Page
+id: nav-category
+layout: default
+header1: Computer
+header2: Accessories
+bgColor: purple-bg
+---
+{{partial "header"}}
+
+{{partial "category-filter-sorter-mobile"}}
+
+{{partial "category-filter-sorter"}}
+<div class="container no-gutter">
+	<div class="row no-gutter" id="products-grid" data-category="all">
+		{{#each product-tiles.tiles}}
+			{{partial "product-tile" this}}
+		{{/each}}
+		{{partial "feature-tile"}}
+		<div id="no-results-found">No results found</div>
+		<a id="compare-choices-btn" href="compare.html">Compare</a>
+	</div>
+</div>
